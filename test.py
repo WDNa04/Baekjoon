@@ -1,6 +1,10 @@
 import sys
-input1 = int(sys.stdin.readline())
+input = sys.stdin.readline()
+a,b = map(int,input.split())
 input2 = sys.stdin.readline()
 list = list(map(int,input2.split()))
-number = int(sys.stdin.readline())
-print(list[0:input1].count(number))
+line = ""
+for i in list:
+    if i < b:
+        line += "{} ".format(i)
+print(line)
