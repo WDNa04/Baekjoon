@@ -1,0 +1,8 @@
+number = str(input())
+a = int(number.split()[0])
+b = int(number.split()[1])
+c = int(number.split()[2])
+print((a+b)%c)
+print(((a%c)+(b%c))%c)
+print((a*b)%c)
+print(((a%c)*(b%c))%c)
