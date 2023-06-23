@@ -1,10 +1,11 @@
 import sys
-input = sys.stdin.readline()
-a,b = map(int,input.split())
-input2 = sys.stdin.readline()
-list = list(map(int,input2.split()))
-line = ""
-for i in list:
-    if i < b:
-        line += "{} ".format(i)
-print(line)
+import string
+word = (sys.stdin.readline()).strip()
+alphabet = list(string.ascii_lowercase)
+list = []
+for i in alphabet:
+    if i in word:
+        list.append(word.index(i))
+    if i not in word:
+        list.append('-1')
+print(*list)
