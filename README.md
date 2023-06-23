@@ -1,1 +1,2 @@
 # Baekjoon
+Baekjoon is an online site used to develop computer programming skills. They have numerous online questions for all of us to solve for free. They also have a ranking system to install competitiveness. 
