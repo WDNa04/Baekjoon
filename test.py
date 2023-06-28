@@ -1,21 +1,27 @@
 import sys
+lista = [['c=', 'č'], ['c-','ć'],['dz=','dž'], ['d-', 'đ'], ['lj','lj'],['nj','nj'],['s=','š'], ['z=','ž']]
 name = sys.stdin.readline()
-name = name.strip().lower()
-lista = []
-for i in name:
-    if i not in lista:
-        lista.append(i)
-dicta = {}
+name = name.strip()
+name2 = ''
 listb = []
-dictb = {}
-for i in lista:
-    dicta[i] = name.count(i)
-for k,v in dicta.items():
-    if v == max(dicta.values()):
-        dictb[k] = v
-if len(dictb) != 1:
-    print('?')
-else:
-    listb = list(dictb)
-    a = listb[0]
-    print(a.upper())
+a = 0
+i = 0
+while i < len(name):
+    name2 += name[i]
+    for k in lista:
+        if k[0] in name2:
+            listb.append(k[0])
+            name2 = name2.replace(k[0],'')
+            a += len(name2)
+            name2 = ''
+        else:
+            pass
+    i+=1
+    if i == len(name):
+        a+=len(name2)
+
+a += len(listb)
+print(a)
+
+
+
