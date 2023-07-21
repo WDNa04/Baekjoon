@@ -1,10 +1,16 @@
 import sys
 
-count = int(sys.stdin.readline())
-lista = []
-listb = []
-for i in range(count):
-    a, b = map(int, sys.stdin.readline().split())
-    lista.append(a)
-    listb.append(b)
-print((max(lista) - min(lista))*(max(listb) - min(listb)))
+number = int(sys.stdin.readline())
+v = 1
+while True:
+    list = []
+    for i in range(1, v + 1):
+        if v % i == 0:
+            list.append(i)
+    if number % v == 0 and len(list) == 2:
+        number = int(number / v)
+        print(v)
+        if number == 1:
+            break
+    else:
+        v += 1
