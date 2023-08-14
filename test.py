@@ -1,8 +1,13 @@
 import sys
 
-count = int(sys.stdin.readline())
-sum = 0
-for i in range(1,count-1):
-    sum += (i * (i+1) / 2)
-print(int(sum))
-print(3)
+def findKthLargest(nums, k):
+    nums_list = list(map(int,nums.split(',')))
+    nums_list.remove(max(nums_list))
+    return max(nums_list)
+
+nums = sys.stdin.readline()
+k = int(sys.stdin.readline())
+print(findKthLargest(nums, k))
+
+
+
