@@ -9,5 +9,4 @@ nums = sys.stdin.readline()
 k = int(sys.stdin.readline())
 print(findKthLargest(nums, k))
 
-print("ㅗ디ㅣㅐ")
 
